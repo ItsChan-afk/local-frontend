@@ -53,9 +53,7 @@ function Exam() {
         </h1>
         {questions.map((question) => (
           <div key={question._id} className="mb-6">
-            <h3 className="text-xl font-semibold mb-3">
-              {question.question}
-            </h3>
+            <h3 className="text-xl font-semibold mb-3">{question.question}</h3>
             <ul className="space-y-2">
               {question.options.map((option, index) => (
                 <li key={index}>
@@ -85,6 +83,5 @@ function Exam() {
     </div>
   );
 }
-
 
 export default Exam;

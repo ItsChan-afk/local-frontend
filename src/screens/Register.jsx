@@ -23,8 +23,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        // "http://localhost:4040/api/auth/register",
-        'https://local-backend-seven.vercel.app/api/auth/register',
+        "https://local-backend-seven.vercel.app/api/auth/register",
         formData,
         { withCredentials: true }
       );
@@ -32,7 +31,17 @@ const Register = () => {
       alert(response.data.message);
       navigate("/login");
     } catch (error) {
-      console.error("Error registering user:", error);
+      if (error.response) {
+        // The request was made, but the server responded with a status code
+        console.error("Error response:", error.response.data);
+        console.error("Error status:", error.response.status);
+      } else if (error.request) {
+        // The request was made but no response was received
+        console.error("No response received:", error.request);
+      } else {
+        // Something happened in setting up the request that triggered an error
+        console.error("Error message:", error.message);
+      }
     }
   };
 
