@@ -11,7 +11,8 @@ const Result = () => {
     const fetchResults = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4040/api/exam/results",
+        //   "http://localhost:4040/api/exam/results",
+        'https://local-backend-seven.vercel.app/api/exam/results',
           { withCredentials: true }
         ); // Update with your API endpoint
         console.log(response.data);

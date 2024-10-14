@@ -9,9 +9,13 @@ const Logout = () => {
     const handleLogout = async () => {
       try {
         // Send request to logout route
-        await axios.get("http://localhost:4040/api/exam/logout", {
-          withCredentials: true, // Ensure the cookie is sent
-        });
+        await axios.get(
+          // "http://localhost:4040/api/exam/logout",
+          "https://local-backend-seven.vercel.app/api/exam/logout",
+          {
+            withCredentials: true, // Ensure the cookie is sent
+          }
+        );
 
         // Redirect to login after logout
         navigate("/login");
