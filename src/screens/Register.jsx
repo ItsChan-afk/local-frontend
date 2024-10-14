@@ -23,7 +23,8 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://local-backend-seven.vercel.app/api/auth/register",
+        // "http://localhost:4040/api/auth/register",
+        "https://local-backend-inky.vercel.app/api/auth/register",
         formData,
         { withCredentials: true }
       );

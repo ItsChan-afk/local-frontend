@@ -34,7 +34,7 @@ function Exam() {
       console.log("Submitting answers : ", selectedAnswers);
       const response = await axios.post(
         // "http://localhost:4040/api/exam/answer",
-        "https://local-backend-seven.vercel.app/api/exam/answer",
+        "https://local-backend-inky.vercel.app//api/exam/answer",
         selectedAnswers,
         { withCredentials: true }
       );

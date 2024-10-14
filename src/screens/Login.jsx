@@ -24,7 +24,7 @@ const Login = () => {
     try {
       const response = await axios.post(
         // "http://localhost:4040/api/auth/login",
-        'https://local-backend-seven.vercel.app/api/auth/login',
+        'https://local-backend-inky.vercel.app/api/auth/login',
         formData,
         { withCredentials: true }
       );

@@ -11,7 +11,7 @@ const Logout = () => {
         // Send request to logout route
         await axios.get(
           // "http://localhost:4040/api/exam/logout",
-          "https://local-backend-seven.vercel.app/api/exam/logout",
+          "https://local-backend-inky.vercel.app/api/exam/logout",
           {
             withCredentials: true, // Ensure the cookie is sent
           }
