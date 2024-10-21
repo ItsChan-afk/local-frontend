@@ -11,7 +11,7 @@ function Exam() {
     async function getData() {
       try {
         const response = await axios.get(
-          "http://localhost:4040/api/exam/questions",
+          "https://local-backend.onrender.com/api/exam/questions",
           { withCredentials: true }
         );
         setQuestions(response.data.storedData);
