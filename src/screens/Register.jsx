@@ -24,7 +24,7 @@ const Register = () => {
     try {
       const response = await axios.post(
         // "http://localhost:4040/api/auth/register",
-        "https://local-backend-inky.vercel.app/api/auth/register",
+        "https://local-backend.onrender.com/api/auth/register",
         formData,
         { withCredentials: true }
       );

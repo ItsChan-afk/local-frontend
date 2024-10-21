@@ -12,7 +12,7 @@ const Result = () => {
       try {
         const response = await axios.get(
           // "http://localhost:4040/api/exam/results",
-        'https://local-backend-inky.vercel.app/api/exam/results',
+        'https://local-backend.onrender.com/api/exam/results',
           { withCredentials: true }
         ); // Update with your API endpoint
         console.log(response.data);
